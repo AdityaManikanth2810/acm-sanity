@@ -1,20 +1,2 @@
-name: CI
-on:
-  push:
-    branches: [main]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v1.4.2
-        with:
-          node-version: 12.x
-      - name: Install dependencies
-        run: |
-          yarn
-      - name: Deploy Sanity
-        run: |
-          set -e
-          SANITY_AUTH_TOKEN="${{ secrets.SANITY_AUTH_TOKEN }}" yarn sanity deploy
+- name: GitHub Action for Sanity.io
+  uses: sanity-io/github-action-sanity@v0.1-alpha
