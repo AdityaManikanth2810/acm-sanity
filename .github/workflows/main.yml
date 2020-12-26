@@ -1,4 +1,3 @@
-```yaml
 name: Deploy Sanity
 on:
   push:
@@ -14,4 +13,3 @@ jobs:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
         with:
           args: deploy
-```
