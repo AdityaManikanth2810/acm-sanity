@@ -6,8 +6,13 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 import teamMember from "./teamMember";
 import facultyMember from "./facultyMember";
+import event from "./event";
+
 import socialLinks from "./socialLinks";
 import member from "./member";
+import blockContent from "./blockContent";
+import guestDetails from "./guestDetails";
+import coordinatorDetails from "./coordinatorDetails";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -19,8 +24,13 @@ export default createSchema({
 
     member,
     socialLinks,
+    blockContent,
+    guestDetails,
+    coordinatorDetails,
+
     teamMember,
     facultyMember,
+    event,
 
     /* Your types here! */
   ]),
