@@ -1,2 +1,13 @@
-- name: GitHub Action for Sanity.io
-  uses: sanity-io/github-action-sanity@v0.1-alpha
+workflow "Deploy on sanity.studio" {
+on = "push"
+resolves = ["deploy"]
+}
+
+action "deploy" {
+needs = ["deploy"]
+uses = "docker://kmelve/github-actions-sanity-io"
+args = "deploy"
+secrets = [
+"skF3aioTgfpnaO13oDHJCrMWQWY265Qw9qyschfcoGbXjelIpcMPQNLwzKhPvXM3r5LcE0zENpu1t2SOYapCYP3v4oZofurBwGRNrSwQ3aA1e3HwvVylAlLQPr8CT8I4OCXRGqAYcwlDtYiXnsZzBLLeIliPHtqLg2ipig7ZELoXGwdEu2PR",
+]
+}
