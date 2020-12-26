@@ -1,13 +1,17 @@
-workflow "Deploy on sanity.studio" {
-on = "push"
-resolves = ["deploy"]
-}
-
-action "deploy" {
-needs = ["deploy"]
-uses = "docker://kmelve/github-actions-sanity-io"
-args = "deploy"
-secrets = [
-"skF3aioTgfpnaO13oDHJCrMWQWY265Qw9qyschfcoGbXjelIpcMPQNLwzKhPvXM3r5LcE0zENpu1t2SOYapCYP3v4oZofurBwGRNrSwQ3aA1e3HwvVylAlLQPr8CT8I4OCXRGqAYcwlDtYiXnsZzBLLeIliPHtqLg2ipig7ZELoXGwdEu2PR",
-]
-}
+```yaml
+name: Deploy Sanity
+on:
+  push:
+    branches: [main]
+jobs:
+  sanity-deploy:
+    runs-on: ubuntu-latest
+    name: Deploy Sanity
+    steps:
+      - uses: actions/checkout@v2
+      - uses: sanity-io/github-action-sanity@v0.1-alpha
+        env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+        with:
+          args: deploy
+```
