@@ -15,7 +15,7 @@ export default {
             type: 'slug',
             options: {
                 source: 'what',
-                maxLength: 40,
+                maxLength: 50,
             },
         },
         {
@@ -28,6 +28,16 @@ export default {
             name: 'when',
             title: 'When',
             type: 'string',
+            validation: Rule => Rule.required()
+        },
+        {
+            name: 'poster',
+            title: 'Poster',
+            type: 'image',
+            options: {
+                hotspot: true,
+                storeOriginalFilename: true
+            },
             validation: Rule => Rule.required()
         },
         {

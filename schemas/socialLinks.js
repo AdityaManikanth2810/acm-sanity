@@ -9,7 +9,7 @@ export default {
             type: 'url'
         },
         {
-            name: 'gitHub',
+            name: 'github',
             title: 'GitHub',
             type: 'url'
         },
@@ -21,7 +21,7 @@ export default {
         {
             name: 'email',
             title: 'Email',
-            type: 'url'
+            type: 'string'
         },
         {
             name: 'twitter',

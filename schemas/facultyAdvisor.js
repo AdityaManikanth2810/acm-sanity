@@ -1,6 +1,6 @@
 export default {
-    name: 'facultyCoordinators',
-    title: 'Faculty Coordinators',
+    name: 'facultyAdvisor',
+    title: 'Faculty Advisor',
     type: 'document',
     fields: [
         {

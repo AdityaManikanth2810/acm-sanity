@@ -6,6 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 import teamMember from "./teamMember";
 import facultyMember from "./facultyMember";
+import facultyAdvisor from "./facultyAdvisor";
 import event from "./event";
 
 import socialLinks from "./socialLinks";
@@ -30,6 +31,7 @@ export default createSchema({
 
     teamMember,
     facultyMember,
+    facultyAdvisor,
     event,
 
     /* Your types here! */

@@ -7,13 +7,13 @@ export default {
             name: 'name',
             title: 'Name',
             type: 'string',
-            validation: Rule => Rule.required().min(5).max(20)
+            validation: Rule => Rule.required().min(5).max(30)
         },
         {
             name: 'designation',
             title: 'Designation',
             type: 'string',
-            validation: Rule => Rule.required().max(20)
+            validation: Rule => Rule.required().max(30)
         },
         {
             name: 'image',
